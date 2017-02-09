@@ -5,6 +5,15 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$('.friend a').click(function(e) {
+	e.preventDefault();
+	var name = $(this).text().trim();
+	var anagram = anagrammedName(name);
+	console.log(name);
+	console.log(anagram);
+	console.log($(this)[0].childNodes[0]);
+	$(this).children('h3').text(anagram);
+});
 /*
  * Function that is called when the document is ready.
  */
